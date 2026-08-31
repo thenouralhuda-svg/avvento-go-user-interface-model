@@ -1727,7 +1727,92 @@
     }
 
 }
+/* =========================================================
+   AVVENTO GO — MOBILE APP LAYOUT FIX
+   ========================================================= */
 
+@media (max-width: 768px) {
+
+    /* Give the entire app breathing room */
+    body {
+        padding-top: 14px !important;
+        padding-bottom: 24px !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Prevent sections from being trapped inside a fixed screen */
+    main,
+    section,
+    .app,
+    .container {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Main app content */
+    .container {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    /* Header / top navigation */
+    header,
+    .header,
+    nav {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Make navigation wrap instead of pushing things off-screen */
+    .top-links {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 12px auto 0 !important;
+        gap: 6px !important;
+    }
+
+    .top-links button {
+        min-height: 40px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Cards and major content blocks */
+    .card,
+    .panel,
+    .box {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Buttons must never extend outside the screen */
+    button,
+    .solid-btn,
+    .outline-btn {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Form fields */
+    input,
+    select,
+    textarea {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Images */
+    img,
+    svg {
+        max-width: 100%;
+    }
+
+    /* Prevent horizontal overflow */
+    * {
+        max-width: 100%;
+    }
+
+}
 </style>
 </head>
 <body>
