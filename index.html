@@ -135,8 +135,2090 @@
     .account-card { padding:22px; border:1px solid var(--line); border-radius:20px; background:#fff; box-shadow:0 10px 25px rgba(30,14,82,.055); }.account-card h2 { margin:0 0 5px;font-size:19px; }.account-card>p { margin:0 0 22px;color:var(--muted);font-size:12px; }.account-grid { display:grid;grid-template-columns:1fr 1fr;gap:14px; }.account-actions { display:flex;justify-content:flex-end;gap:9px;margin-top:22px;padding-top:17px;border-top:1px solid var(--line); }.list-empty { padding:30px 15px;text-align:center;color:var(--muted);font-size:12px; }.list-empty b { display:block;margin-bottom:5px;color:#40384e;font-size:14px; }.address-card,.method-card { display:flex;align-items:center;gap:12px;margin-bottom:11px;padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff; }.address-card:last-child,.method-card:last-child { margin-bottom:0; }.address-icon,.method-icon { display:grid;place-items:center;flex:0 0 41px;width:41px;height:41px;border:1px solid #dfd2ff;border-radius:13px 13px 13px 4px;color:var(--electric);background:linear-gradient(145deg,#f0eaff,#fff);font-size:18px;box-shadow:0 5px 11px rgba(93,48,194,.1); }.address-card b,.method-card b { display:block;color:#342d40;font-size:12px; }.address-card small,.method-card small { display:block;margin-top:3px;color:#878092;font-size:10px; }.address-card .card-actions,.method-card .card-actions { display:flex;gap:3px;margin-right:auto; }.mini-action { width:31px;height:31px;border:1px solid var(--line);border-radius:9px;color:var(--purple);background:#fff;font-size:14px; }.mini-action.danger { color:var(--danger); }.default-pill { margin-right:auto;padding:4px 7px;border-radius:999px;color:#347b55;background:#ecf9f0;font-size:9px;font-weight:700; }.option-row { display:flex;align-items:center;min-height:61px;padding:0 15px;border-bottom:1px solid var(--line);background:#fff; }.option-row:last-child { border-bottom:0; }.option-row b { display:block;color:#393242;font-size:12px; }.option-row small { display:block;margin-top:2px;color:#898293;font-size:10px; }.option-row .option-copy { margin-left:auto; }.switch { position:relative;width:42px;height:24px;padding:0;border-radius:999px;background:#d8d2df;transition:.2s; }.switch:after { content:"";position:absolute;top:3px;right:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.18);transition:.2s; }.switch.on { background:linear-gradient(90deg,var(--orange),#a650ff);box-shadow:0 0 11px rgba(255,101,0,.28); }.switch.on:after { transform:translateX(-18px); }.language-option { display:flex;align-items:center;gap:11px;width:100%;min-height:70px;margin-bottom:9px;padding:13px;border:1px solid var(--line);border-radius:15px;background:#fff;text-align:right; }.language-option.selected { border-color:#986bff;background:linear-gradient(90deg,#f6f1ff,#fff);box-shadow:0 0 0 4px rgba(113,69,231,.07); }.language-option i { display:grid;place-items:center;width:31px;height:31px;border-radius:11px;color:#fff;background:var(--purple);font-style:normal;font-size:13px; }.language-option strong { display:block;font-size:12px; }.language-option small { display:block;margin-top:3px;color:#898293;font-size:10px; }.language-option .radio { width:19px;height:19px;margin-right:auto;border:1px solid #cfc7da;border-radius:50%; }.language-option.selected .radio { border:5px solid var(--orange); }.chat-shell { display:grid;grid-template-rows:1fr auto;min-height:450px;border:1px solid var(--line);border-radius:20px;background:#fff;overflow:hidden; }.chat-thread { padding:19px;overflow:auto;background:linear-gradient(180deg,#fbfaff,#fff); }.chat-bubble { width:max-content;max-width:82%;margin-bottom:12px;padding:10px 12px;border-radius:14px 14px 4px 14px;color:#fff;background:linear-gradient(135deg,var(--purple),#7441da);font-size:11px;line-height:1.7; }.chat-bubble.agent { margin-right:auto;border-radius:14px 14px 14px 4px;color:#453d50;background:#f0ebfa; }.chat-entry { display:flex;gap:8px;padding:12px;border-top:1px solid var(--line); }.chat-entry input { flex:1;height:43px;padding:0 12px;border:1px solid #ded7e7;border-radius:12px;outline:0;background:#fff;font-size:11px; }.chat-entry input:focus { border-color:var(--electric);box-shadow:0 0 0 3px #f0eaff; }.chat-entry button { width:43px;border-radius:12px;color:#fff;background:var(--orange);font-size:17px; }
     @media(max-width:570px){.account-grid{grid-template-columns:1fr}.account-card{padding:18px 15px}.account-actions{justify-content:stretch}.account-actions button{flex:1}}
   </style>
+  <style>
+
+/* =========================================================
+   AVVENTO GO — PREMIUM ONBOARDING
+   ========================================================= */
+
+#avvento-onboarding {
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 999999;
+
+    direction: rtl;
+
+    color: #fff;
+
+    background:
+        radial-gradient(
+            circle at 80% 18%,
+            rgba(112, 64, 255, .22),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 15% 85%,
+            rgba(255, 116, 24, .13),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #08060d 0%,
+            #0d0915 50%,
+            #110b19 100%
+        );
+
+    font-family:
+        Arial,
+        "Noto Sans Arabic",
+        "Segoe UI",
+        sans-serif;
+
+    overflow: hidden;
+
+    transition:
+        opacity .65s ease,
+        visibility .65s ease;
+
+}
+
+
+#avvento-onboarding.hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+
+/* Background grid */
+
+#avvento-onboarding::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .32;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.018) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.018) 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent
+        );
+
+}
+
+
+/* Moving atmosphere */
+
+.av-orb {
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.035);
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    animation:
+        av-orbit 22s linear infinite;
+
+    pointer-events: none;
+
+}
+
+
+@keyframes av-orbit {
+
+    from {
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+    }
+
+}
+
+
+/* Main container */
+
+.av-onboarding-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(1200px, 100%);
+
+    height: 100%;
+
+    margin: auto;
+
+    padding:
+        28px 35px 24px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.av-onboarding-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+}
+
+
+.av-logo {
+
+    font-size:
+        22px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.av-logo span {
+
+    color:
+        #ff7418;
+
+}
+
+
+.av-skip {
+
+    padding:
+        9px 16px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    color:
+        #aaa2b3;
+
+    cursor:
+        pointer;
+
+    backdrop-filter:
+        blur(15px);
+
+    transition:
+        .25s ease;
+
+}
+
+
+.av-skip:hover {
+
+    color:
+        #fff;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border-color:
+        rgba(255,255,255,.18);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   SLIDES
+   ========================================================= */
+
+.av-slide {
+
+    flex: 1;
+
+    display:
+        none;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        70px;
+
+    direction:
+        ltr;
+
+}
+
+
+.av-slide.active {
+
+    display:
+        grid;
+
+    animation:
+        av-slide-in .65s
+        cubic-bezier(.16,1,.3,1);
+
+}
+
+
+@keyframes av-slide-in {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(22px)
+            scale(.985);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.av-copy {
+
+    direction:
+        rtl;
+
+    max-width:
+        540px;
+
+}
+
+
+.av-eyebrow {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    color:
+        #9b78ff;
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    margin-bottom:
+        17px;
+
+}
+
+
+.av-eyebrow::before {
+
+    content: "";
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        #ff7418;
+
+    box-shadow:
+        0 0 18px
+        rgba(255,116,24,.75);
+
+}
+
+
+.av-copy h1 {
+
+    margin:
+        0 0 23px;
+
+    font-size:
+        clamp(45px, 6vw, 78px);
+
+    line-height:
+        1.03;
+
+    letter-spacing:
+        -2px;
+
+    color:
+        #ff7418;
+
+    text-shadow:
+
+        0 0 28px
+        rgba(255,116,24,.15),
+
+        0 0 75px
+        rgba(255,116,24,.07);
+
+}
+
+
+.av-copy h2 {
+
+    margin:
+        0 0 22px;
+
+    font-size:
+        clamp(37px, 4.5vw, 58px);
+
+    line-height:
+        1.08;
+
+    letter-spacing:
+        -1px;
+
+    color:
+        #fff;
+
+}
+
+
+.av-lead {
+
+    margin:
+        0 0 30px;
+
+    color:
+        #aaa2b3;
+
+    font-size:
+        17px;
+
+    line-height:
+        1.9;
+
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.av-primary {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    border-radius:
+        15px;
+
+    padding:
+        16px 29px;
+
+    color:
+        #fff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #9877ff,
+            #6535e9
+        );
+
+    box-shadow:
+
+        0 14px 40px
+        rgba(112,64,255,.25),
+
+        inset 0 1px 0
+        rgba(255,255,255,.20);
+
+    font-size:
+        15px;
+
+    font-weight:
+        900;
+
+    cursor:
+        pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.av-primary::before {
+
+    content: "";
+
+    position:
+        absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 70%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.24),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left .7s ease;
+
+}
+
+
+.av-primary:hover::before {
+
+    left:
+        140%;
+
+}
+
+
+.av-primary:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.015);
+
+    box-shadow:
+
+        0 20px 55px
+        rgba(112,64,255,.40),
+
+        0 0 30px
+        rgba(112,64,255,.10);
+
+}
+
+
+.av-primary:active {
+
+    transform:
+        scale(.97);
+
+}
+
+
+/* =========================================================
+   VISUAL — ROUTE
+   ========================================================= */
+
+.av-visual {
+
+    direction:
+        ltr;
+
+    position:
+        relative;
+
+    min-height:
+        430px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+}
+
+
+.av-route {
+
+    position:
+        relative;
+
+    width:
+        min(560px,100%);
+
+    height:
+        390px;
+
+}
+
+
+.av-route svg {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    overflow:
+        visible;
+
+}
+
+
+.av-route-path {
+
+    fill:
+        none;
+
+    stroke:
+        url(#avventoRouteGradient);
+
+    stroke-width:
+        2;
+
+    stroke-dasharray:
+        8 9;
+
+    opacity:
+        .8;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(112,64,255,.55)
+        );
+
+    animation:
+        av-route-pulse
+        2.5s ease-in-out infinite;
+
+}
+
+
+@keyframes av-route-pulse {
+
+    0%,100% {
+        opacity:
+            .42;
+    }
+
+    50% {
+        opacity:
+            1;
+    }
+
+}
+
+
+/* Moving shipment */
+
+.av-moving-shipment {
+
+    fill:
+        #ff7418;
+
+    filter:
+        url(#avventoGlow);
+
+}
+
+
+/* =========================================================
+   DESTINATION DOTS
+   ========================================================= */
+
+.av-destination {
+
+    position:
+        absolute;
+
+    width:
+        10px;
+
+    height:
+        10px;
+
+    border-radius:
+        50%;
+
+    background:
+        #ff7418;
+
+    box-shadow:
+
+        0 0 0 5px
+        rgba(255,116,24,.10),
+
+        0 0 25px
+        rgba(255,116,24,.75);
+
+    animation:
+        av-destination-pulse
+        2s ease-in-out infinite;
+
+}
+
+
+.av-destination.one {
+
+    left:
+        6%;
+
+    top:
+        20%;
+
+}
+
+
+.av-destination.two {
+
+    left:
+        49%;
+
+    top:
+        57%;
+
+    animation-delay:
+        .5s;
+
+}
+
+
+.av-destination.three {
+
+    right:
+        6%;
+
+    top:
+        18%;
+
+    animation-delay:
+        1s;
+
+}
+
+
+@keyframes av-destination-pulse {
+
+    0%,100% {
+
+        transform:
+            scale(1);
+
+        opacity:
+            .65;
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.55);
+
+        opacity:
+            1;
+
+    }
+
+}
+
+
+/* =========================================================
+   LOGISTICS ICON CARDS
+   ========================================================= */
+
+.av-node {
+
+    position:
+        absolute;
+
+    width:
+        86px;
+
+    height:
+        86px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    border-radius:
+        26px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.11),
+            rgba(255,255,255,.035)
+        );
+
+    backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+
+        0 25px 70px
+        rgba(0,0,0,.35),
+
+        inset 0 1px 0
+        rgba(255,255,255,.12);
+
+    font-size:
+        31px;
+
+    cursor:
+        default;
+
+    transition:
+        .3s ease;
+
+    animation:
+        av-float
+        4s ease-in-out infinite;
+
+}
+
+
+.av-node:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.08);
+
+    border-color:
+        rgba(255,116,24,.55);
+
+    box-shadow:
+
+        0 30px 80px
+        rgba(255,116,24,.13),
+
+        inset 0 1px 0
+        rgba(255,255,255,.2);
+
+}
+
+
+.av-node.air {
+
+    left:
+        0;
+
+    top:
+        10%;
+
+}
+
+
+.av-node.sea {
+
+    left:
+        43%;
+
+    top:
+        51%;
+
+    animation-delay:
+        -.8s;
+
+}
+
+
+.av-node.land {
+
+    right:
+        0;
+
+    top:
+        9%;
+
+    animation-delay:
+        -1.6s;
+
+}
+
+
+@keyframes av-float {
+
+    0%,100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-9px);
+    }
+
+}
+
+
+/* =========================================================
+   LIVE TRACKING CARD
+   ========================================================= */
+
+.av-live-card {
+
+    position:
+        absolute;
+
+    right:
+        8%;
+
+    bottom:
+        7%;
+
+    padding:
+        12px 17px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(9,7,14,.75);
+
+    backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.35);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    animation:
+        av-live-float
+        3s ease-in-out infinite;
+
+}
+
+
+.av-live-card span {
+
+    color:
+        #63e6a3;
+
+}
+
+
+@keyframes av-live-float {
+
+    0%,100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-7px);
+    }
+
+}
+
+
+/* =========================================================
+   BENEFITS
+   ========================================================= */
+
+.av-benefits {
+
+    width:
+        min(540px,100%);
+
+    display:
+        grid;
+
+    gap:
+        13px;
+
+}
+
+
+.av-benefit {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        17px;
+
+    padding:
+        20px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius:
+        20px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.025)
+        );
+
+    backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0,0,0,.18);
+
+    transition:
+        .3s cubic-bezier(.16,1,.3,1);
+
+}
+
+
+.av-benefit:hover {
+
+    transform:
+        translateX(-9px);
+
+    border-color:
+        rgba(112,64,255,.42);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(112,64,255,.14),
+            rgba(255,255,255,.035)
+        );
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.28);
+
+}
+
+
+.av-benefit-icon {
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    flex:
+        none;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid
+        rgba(155,120,255,.18);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(112,64,255,.13);
+
+    font-size:
+        22px;
+
+    transition:
+        .3s ease;
+
+}
+
+
+.av-benefit:hover .av-benefit-icon {
+
+    transform:
+        rotate(-7deg)
+        scale(1.08);
+
+    background:
+        rgba(255,116,24,.14);
+
+    box-shadow:
+        0 0 30px
+        rgba(255,116,24,.12);
+
+}
+
+
+.av-benefit strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+}
+
+
+.av-benefit p {
+
+    color:
+        #aaa2b3;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* =========================================================
+   STEPS
+   ========================================================= */
+
+.av-steps {
+
+    width:
+        min(540px,100%);
+
+    display:
+        grid;
+
+    gap:
+        13px;
+
+}
+
+
+.av-step {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        17px;
+
+    padding:
+        19px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(255,255,255,.055);
+
+    backdrop-filter:
+        blur(18px);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.av-step:hover {
+
+    transform:
+        translateX(-8px);
+
+    border-color:
+        rgba(255,116,24,.38);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.25);
+
+}
+
+
+.av-step-number {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    flex:
+        none;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff7418,
+            #ff5108
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(255,116,24,.18);
+
+    font-weight:
+        900;
+
+    transition:
+        .3s ease;
+
+}
+
+
+.av-step:hover .av-step-number {
+
+    transform:
+        scale(1.12);
+
+    box-shadow:
+        0 0 40px
+        rgba(255,116,24,.35);
+
+}
+
+
+.av-step strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+}
+
+
+.av-step span {
+
+    color:
+        #aaa2b3;
+
+    font-size:
+        13px;
+
+}
+
+
+/* =========================================================
+   BOTTOM CONTROLS
+   ========================================================= */
+
+.av-onboarding-bottom {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+}
+
+
+.av-dots {
+
+    display:
+        flex;
+
+    direction:
+        ltr;
+
+    gap:
+        7px;
+
+}
+
+
+.av-dot {
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        20px;
+
+    background:
+        #403a49;
+
+    transition:
+        .35s ease;
+
+}
+
+
+.av-dot.active {
+
+    width:
+        32px;
+
+    background:
+        #ff7418;
+
+    box-shadow:
+        0 0 16px
+        rgba(255,116,24,.4);
+
+}
+
+
+.av-actions {
+
+    display:
+        flex;
+
+    gap:
+        10px;
+
+}
+
+
+.av-back {
+
+    padding:
+        14px 22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    color:
+        #ddd8e4;
+
+    cursor:
+        pointer;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.av-back:hover {
+
+    background:
+        rgba(255,255,255,.08);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:800px) {
+
+    .av-onboarding-container {
+
+        padding:
+            20px 17px;
+
+    }
+
+
+    .av-slide {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            0;
+
+    }
+
+
+    .av-visual {
+
+        order:
+            -1;
+
+        min-height:
+            245px;
+
+    }
+
+
+    .av-route {
+
+        transform:
+            scale(.68);
+
+    }
+
+
+    .av-copy h1 {
+
+        font-size:
+            43px;
+
+    }
+
+
+    .av-copy h2 {
+
+        font-size:
+            34px;
+
+    }
+
+
+    .av-lead {
+
+        font-size:
+            15px;
+
+    }
+
+
+    .av-live-card {
+
+        right:
+            2%;
+
+    }
+
+}
+
+</style>
 </head>
 <body>
+  <!-- =========================================================
+     AVVENTO GO — ONBOARDING
+     ========================================================= -->
+
+<div id="avvento-onboarding">
+
+    <div class="av-orb"></div>
+
+
+    <div class="av-onboarding-container">
+
+
+        <!-- TOP BAR -->
+
+        <div class="av-onboarding-top">
+
+            <div class="av-logo">
+                AVVENTO <span>GO</span>
+            </div>
+
+
+            <button
+                class="av-skip"
+                onclick="avventoFinishOnboarding()"
+            >
+                تخطي
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SLIDE 1 — WELCOME
+             ================================================= -->
+
+        <section
+            class="av-slide active"
+            data-av-slide="1"
+        >
+
+
+            <div class="av-copy">
+
+
+                <div class="av-eyebrow">
+                    مستقبل الشحن يبدأ هنا
+                </div>
+
+
+                <h1>
+                    من أي مكان،<br>
+                    إلى أي مكان.
+                </h1>
+
+
+                <p class="av-lead">
+                    حلول شحن جوي وبحري وبري تساعدك
+                    على نقل بضائعك بسهولة،
+                    أينما كانت وجهتها.
+                </p>
+
+
+                <button
+                    class="av-primary"
+                    onclick="avventoNextSlide()"
+                >
+                    اكتشف Avvento Go
+                </button>
+
+
+            </div>
+
+
+
+            <!-- VISUAL -->
+
+            <div class="av-visual">
+
+
+                <div class="av-route">
+
+
+                    <svg
+                        viewBox="0 0 560 390"
+                        fill="none"
+                    >
+
+
+                        <defs>
+
+
+                            <linearGradient
+                                id="avventoRouteGradient"
+                                x1="0"
+                                y1="0"
+                                x2="1"
+                                y2="0"
+                            >
+
+                                <stop
+                                    offset="0%"
+                                    stop-color="#ff7418"
+                                />
+
+                                <stop
+                                    offset="100%"
+                                    stop-color="#9877ff"
+                                />
+
+                            </linearGradient>
+
+
+                            <filter
+                                id="avventoGlow"
+                            >
+
+                                <feGaussianBlur
+                                    stdDeviation="4"
+                                    result="blur"
+                                />
+
+                                <feMerge>
+
+                                    <feMergeNode
+                                        in="blur"
+                                    />
+
+                                    <feMergeNode
+                                        in="SourceGraphic"
+                                    />
+
+                                </feMerge>
+
+                            </filter>
+
+
+                        </defs>
+
+
+                        <path
+                            class="av-route-path"
+                            d="
+                                M45 85
+                                C150 105
+                                175 250
+                                290 225
+                                C405 200
+                                430 70
+                                515 78
+                            "
+                        />
+
+
+                        <circle
+                            class="av-moving-shipment"
+                            r="5"
+                        >
+
+                            <animateMotion
+                                dur="5s"
+                                repeatCount="indefinite"
+                                path="
+                                    M45 85
+                                    C150 105
+                                    175 250
+                                    290 225
+                                    C405 200
+                                    430 70
+                                    515 78
+                                "
+                            />
+
+                        </circle>
+
+
+                    </svg>
+
+
+
+                    <div
+                        class="av-destination one"
+                    ></div>
+
+
+                    <div
+                        class="av-destination two"
+                    ></div>
+
+
+                    <div
+                        class="av-destination three"
+                    ></div>
+
+
+
+                    <div
+                        class="av-node air"
+                        title="الشحن الجوي"
+                    >
+                        ✈️
+                    </div>
+
+
+                    <div
+                        class="av-node sea"
+                        title="الشحن البحري"
+                    >
+                        🚢
+                    </div>
+
+
+                    <div
+                        class="av-node land"
+                        title="الشحن البري"
+                    >
+                        🚚
+                    </div>
+
+
+
+                    <div class="av-live-card">
+
+                        <span>●</span>
+
+                        تتبع مباشر
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SLIDE 2 — WHY AVVENTO
+             ================================================= -->
+
+        <section
+            class="av-slide"
+            data-av-slide="2"
+        >
+
+
+            <div class="av-copy">
+
+
+                <div class="av-eyebrow">
+                    لماذا Avvento Go؟
+                </div>
+
+
+                <h2>
+                    شحنك تحت السيطرة.
+                </h2>
+
+
+                <p class="av-lead">
+                    لأن إدارة شحنات أعمالك لا يجب أن تكون
+                    معقدة. كل ما تحتاجه، في مكان واحد.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="av-visual">
+
+
+                <div class="av-benefits">
+
+
+                    <div class="av-benefit">
+
+
+                        <div class="av-benefit-icon">
+                            📍
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                وضوح في كل خطوة
+                            </strong>
+
+                            <p>
+                                تابع حالة شحنتك واعرف
+                                أين وصلت في أي وقت.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="av-benefit">
+
+
+                        <div class="av-benefit-icon">
+                            💰
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                تكلفة واضحة
+                            </strong>
+
+                            <p>
+                                تعرف على تفاصيل الشحن
+                                قبل اتخاذ قرارك.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="av-benefit">
+
+
+                        <div class="av-benefit-icon">
+                            ⚡
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                خيارات تناسبك
+                            </strong>
+
+                            <p>
+                                جوي، بحري أو بري —
+                                اختر ما يناسب شحنتك.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="av-benefit">
+
+
+                        <div class="av-benefit-icon">
+                            🛡️
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                إدارة أسهل
+                            </strong>
+
+                            <p>
+                                اجعل عمليات الشحن أكثر
+                                تنظيماً وأقل تعقيداً.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SLIDE 3 — HOW IT WORKS
+             ================================================= -->
+
+        <section
+            class="av-slide"
+            data-av-slide="3"
+        >
+
+
+            <div class="av-copy">
+
+
+                <div class="av-eyebrow">
+                    ببساطة
+                </div>
+
+
+                <h2>
+                    ثلاث خطوات،<br>
+                    وشحنتك تتحرك.
+                </h2>
+
+
+                <p class="av-lead">
+                    من إنشاء الشحنة إلى استلامها،
+                    تبقى كل خطوة واضحة أمامك.
+                </p>
+
+
+                <button
+                    class="av-primary"
+                    onclick="avventoFinishOnboarding()"
+                >
+                    ابدأ الآن
+                </button>
+
+
+            </div>
+
+
+
+            <div class="av-visual">
+
+
+                <div class="av-steps">
+
+
+                    <div class="av-step">
+
+
+                        <div class="av-step-number">
+                            ١
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                أنشئ شحنتك
+                            </strong>
+
+                            <span>
+                                أدخل تفاصيل الشحنة واحتياجاتك.
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="av-step">
+
+
+                        <div class="av-step-number">
+                            ٢
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                تابعها
+                            </strong>
+
+                            <span>
+                                اعرف حالة شحنتك في كل مرحلة.
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="av-step">
+
+
+                        <div class="av-step-number">
+                            ٣
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                استلمها
+                            </strong>
+
+                            <span>
+                                تصل شحنتك إلى وجهتها بكل وضوح.
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOTTOM CONTROLS
+             ================================================= -->
+
+        <div class="av-onboarding-bottom">
+
+
+            <div class="av-dots">
+
+
+                <span
+                    class="av-dot active"
+                ></span>
+
+
+                <span
+                    class="av-dot"
+                ></span>
+
+
+                <span
+                    class="av-dot"
+                ></span>
+
+
+            </div>
+
+
+
+            <div class="av-actions">
+
+
+                <button
+                    id="avventoBack"
+                    class="av-back"
+                    onclick="avventoPreviousSlide()"
+                    style="display:none"
+                >
+                    رجوع
+                </button>
+
+
+                <button
+                    id="avventoNext"
+                    class="av-primary"
+                    onclick="avventoNextSlide()"
+                >
+                    التالي
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
   <div class="site">
     <header class="topbar">
       <div class="brand"><img class="brand-logo" src="./avvento-go-wordmark.png" alt="avvento GO"></div>
@@ -188,5 +2270,205 @@
     function closeNotices(){document.getElementById('notice-box')?.remove();}
     go('home');
   </script>
+  <script>
+
+/* =========================================================
+   AVVENTO GO — ONBOARDING CONTROLLER
+   ========================================================= */
+
+(function () {
+
+
+    let avventoCurrentSlide = 1;
+
+
+    const avventoSlides =
+        document.querySelectorAll(
+            ".av-slide"
+        );
+
+
+    const avventoDots =
+        document.querySelectorAll(
+            ".av-dot"
+        );
+
+
+    const avventoNext =
+        document.getElementById(
+            "avventoNext"
+        );
+
+
+    const avventoBack =
+        document.getElementById(
+            "avventoBack"
+        );
+
+
+    const avventoOnboarding =
+        document.getElementById(
+            "avvento-onboarding"
+        );
+
+
+
+    /* -----------------------------------------
+       UPDATE SLIDE
+       ----------------------------------------- */
+
+    function avventoUpdateSlide() {
+
+
+        avventoSlides.forEach(
+            function (slide) {
+
+                const slideNumber =
+                    Number(
+                        slide.dataset.avSlide
+                    );
+
+
+                slide.classList.toggle(
+                    "active",
+                    slideNumber ===
+                    avventoCurrentSlide
+                );
+
+            }
+        );
+
+
+        avventoDots.forEach(
+            function (dot, index) {
+
+                dot.classList.toggle(
+                    "active",
+                    index ===
+                    avventoCurrentSlide - 1
+                );
+
+            }
+        );
+
+
+        /* Back button */
+
+        if (
+            avventoCurrentSlide === 1
+        ) {
+
+            avventoBack.style.display =
+                "none";
+
+        } else {
+
+            avventoBack.style.display =
+                "block";
+
+        }
+
+
+        /* Next button */
+
+        if (
+            avventoCurrentSlide === 3
+        ) {
+
+            avventoNext.style.display =
+                "none";
+
+        } else {
+
+            avventoNext.style.display =
+                "block";
+
+            avventoNext.textContent =
+                "التالي";
+
+        }
+
+    }
+
+
+
+    /* -----------------------------------------
+       NEXT
+       ----------------------------------------- */
+
+    window.avventoNextSlide =
+        function () {
+
+
+            if (
+                avventoCurrentSlide < 3
+            ) {
+
+                avventoCurrentSlide++;
+
+                avventoUpdateSlide();
+
+            }
+
+        };
+
+
+
+    /* -----------------------------------------
+       PREVIOUS
+       ----------------------------------------- */
+
+    window.avventoPreviousSlide =
+        function () {
+
+
+            if (
+                avventoCurrentSlide > 1
+            ) {
+
+                avventoCurrentSlide--;
+
+                avventoUpdateSlide();
+
+            }
+
+        };
+
+
+
+    /* -----------------------------------------
+       FINISH
+       ----------------------------------------- */
+
+    window.avventoFinishOnboarding =
+        function () {
+
+
+            avventoOnboarding.classList.add(
+                "hidden"
+            );
+
+
+            document.body.style.overflow =
+                "";
+
+        };
+
+
+
+    /* -----------------------------------------
+       INITIAL STATE
+       ----------------------------------------- */
+
+    document.body.style.overflow =
+        "hidden";
+
+
+    avventoUpdateSlide();
+
+
+})();
+
+</script>
 </body>
 </html>
