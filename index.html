@@ -19,155 +19,61 @@
     .topbar { position:sticky; top:0; z-index:20; height:72px; display:flex; align-items:center; justify-content:space-between; padding:0 clamp(20px,5vw,78px); background:rgba(246,244,251,.84); border-bottom:1px solid rgba(225,220,238,.7); backdrop-filter:blur(16px); }
     .brand { display:flex; align-items:center; gap:10px; color:var(--purple); font-family:Outfit,"IBM Plex Sans Arabic",sans-serif; font-size:21px; font-weight:700; letter-spacing:.02em; direction:ltr; }
     .brand-logo { display:block; width:202px; height:46px; padding:4px 7px; object-fit:contain; border-radius:11px; background:#faf8ff; box-shadow:0 5px 13px rgba(36,16,107,.10); }
-    /* =========================================================
-   AVVENTO GO — PREMIUM TOP NAVIGATION
-   ========================================================= */
-
-    .top-links {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-left: auto;
-        direction: rtl;
-    }
-    
-    
-    /* All navigation buttons */
-    
-    .top-links button {
-        position: relative;
-    
-        height: 42px;
-        padding: 0 16px;
-    
-        border: 1px solid transparent;
-        border-radius: 12px;
-    
-        background: transparent;
-    
-        color: #aaa4b5;
-    
-        font-family: inherit;
-        font-size: 13px;
-        font-weight: 700;
-    
-        cursor: pointer;
-    
-        transition:
-            color .25s ease,
-            background .25s ease,
-            border-color .25s ease,
-            transform .25s ease,
-            box-shadow .25s ease;
-    
-        overflow: hidden;
-    }
-    
-    
-    /* Subtle light sweep */
-    
-    .top-links button::before {
-        content: "";
-    
-        position: absolute;
-    
-        top: 0;
-        left: -120%;
-    
-        width: 70%;
-        height: 100%;
-    
-        background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,.10),
-            transparent
-        );
-    
-        transform: skewX(-20deg);
-    
-        transition: left .6s ease;
-    
-        pointer-events: none;
-    }
-    
-    
-    .top-links button:hover::before {
-        left: 140%;
-    }
-    
-    
-    /* Normal hover */
-    
-    .top-links button:hover {
-        color: #ffffff;
-    
-        background:
-            rgba(255,255,255,.055);
-    
-        border-color:
-            rgba(255,255,255,.10);
-    
-        transform:
-            translateY(-2px);
-    
-        box-shadow:
-            0 10px 28px rgba(0,0,0,.20);
-    }
-    
-    
-    /* =========================================================
-       OUTLINE — LOGIN
+        /* =========================================================
+       AVVENTO GO — LIGHT MODE NAVIGATION OVERRIDES
        ========================================================= */
     
-    .top-links .outline-btn {
-        color: #ddd8e5;
+    .top-links button {
+        color: #4b4655;
+    }
     
-        border:
-            1px solid rgba(255,255,255,.13);
+    .top-links button:hover {
+        color: #241d2d;
     
-        background:
-            rgba(255,255,255,.035);
+        background: rgba(112, 64, 255, .055);
+    
+        border-color: rgba(112, 64, 255, .12);
     
         box-shadow:
-            inset 0 1px 0 rgba(255,255,255,.07);
+            0 8px 24px rgba(35, 25, 55, .08);
+    }
+    
+    
+    /* Login button */
+    
+    .top-links .outline-btn {
+        color: #302a38;
+    
+        background:
+            rgba(255,255,255,.72);
+    
+        border:
+            1px solid rgba(55,45,70,.14);
+    
+        box-shadow:
+            0 4px 15px rgba(35,25,55,.06),
+            inset 0 1px 0 rgba(255,255,255,.8);
     }
     
     
     .top-links .outline-btn:hover {
-        color: #ffffff;
-    
-        border-color:
-            rgba(155,120,255,.45);
+        color: #241d2d;
     
         background:
-            rgba(112,64,255,.10);
+            rgba(112,64,255,.07);
+    
+        border-color:
+            rgba(112,64,255,.28);
     
         box-shadow:
-            0 10px 30px rgba(112,64,255,.16),
-            inset 0 1px 0 rgba(255,255,255,.10);
+            0 8px 24px rgba(112,64,255,.10);
     }
     
     
-    /* =========================================================
-       SOLID — SEND SHIPMENT
-       ========================================================= */
+    /* Send shipment button */
     
     .top-links .solid-btn {
-        display: inline-flex;
-    
-        align-items: center;
-        justify-content: center;
-    
-        gap: 10px;
-    
-        padding:
-            0 18px;
-    
         color: #ffffff;
-    
-        border:
-            1px solid rgba(255,255,255,.12);
     
         background:
             linear-gradient(
@@ -177,34 +83,12 @@
             );
     
         box-shadow:
-            0 8px 25px rgba(112,64,255,.22),
-            inset 0 1px 0 rgba(255,255,255,.18);
-    
-        font-weight: 800;
-    }
-    
-    
-    /* Orange arrow */
-    
-    .top-links .solid-btn span {
-        display: inline-flex;
-    
-        align-items: center;
-        justify-content: center;
-    
-        color: #ff7418;
-    
-        font-size: 17px;
-        font-weight: 900;
-    
-        transition:
-            transform .25s ease;
+            0 8px 22px rgba(112,64,255,.20);
     }
     
     
     .top-links .solid-btn:hover {
-        transform:
-            translateY(-3px);
+        color: #ffffff;
     
         background:
             linear-gradient(
@@ -214,78 +98,24 @@
             );
     
         box-shadow:
-            0 15px 38px rgba(112,64,255,.38),
-            0 0 22px rgba(112,64,255,.12),
-            inset 0 1px 0 rgba(255,255,255,.22);
+            0 12px 30px rgba(112,64,255,.28);
     }
     
     
-    .top-links .solid-btn:hover span {
-        transform:
-            translateX(-5px);
+    /* Orange arrow */
+    
+    .top-links .solid-btn span {
+        color: #ff7418;
     }
     
     
-    /* Click effect */
-    
-    .top-links button:active {
-        transform:
-            translateY(0)
-            scale(.97);
-    }
-    
-    
-    /* =========================================================
-       SMALL ACTIVE INDICATOR
-       ========================================================= */
+    /* Active "الرؤية" indicator */
     
     .top-links button[onclick*="home"]::after {
-        content: "";
-    
-        position: absolute;
-    
-        bottom: 5px;
-        left: 50%;
-    
-        width: 4px;
-        height: 4px;
-    
-        border-radius: 50%;
-    
         background: #ff7418;
     
         box-shadow:
-            0 0 10px rgba(255,116,24,.65);
-    
-        transform:
-            translateX(-50%);
-    
-        opacity: .75;
-    }
-    
-    
-    /* =========================================================
-       MOBILE
-       ========================================================= */
-    
-    @media (max-width: 800px) {
-    
-        .top-links {
-            gap: 5px;
-        }
-    
-        .top-links button {
-            height: 38px;
-    
-            padding: 0 10px;
-    
-            font-size: 11px;
-        }
-    
-        .top-links .solid-btn {
-            padding: 0 12px;
-        }
-    
+            0 0 9px rgba(255,116,24,.45);
     }
     .outline-btn,.solid-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:42px; padding:0 16px; border-radius:12px; font-weight:700; font-size:13px; transition:.2s ease; }
     .outline-btn { color:var(--purple); background:#fff; border:1px solid #ded8ed; }
