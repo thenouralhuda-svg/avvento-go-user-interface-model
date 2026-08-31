@@ -19,7 +19,36 @@
     .topbar { position:sticky; top:0; z-index:20; height:72px; display:flex; align-items:center; justify-content:space-between; padding:0 clamp(20px,5vw,78px); background:rgba(246,244,251,.84); border-bottom:1px solid rgba(225,220,238,.7); backdrop-filter:blur(16px); }
     .brand { display:flex; align-items:center; gap:10px; color:var(--purple); font-family:Outfit,"IBM Plex Sans Arabic",sans-serif; font-size:21px; font-weight:700; letter-spacing:.02em; direction:ltr; }
     .brand-logo { display:block; width:202px; height:46px; padding:4px 7px; object-fit:contain; border-radius:11px; background:#faf8ff; box-shadow:0 5px 13px rgba(36,16,107,.10); }
+        /* AVVENTO GO — FINAL NAV TEXT COLORS */
     
+    .top-links > button {
+        color: #7040E8 !important;
+    }
+    
+    /* Keep the primary shipment button white */
+    .top-links > .solid-btn {
+        color: #ffffff !important;
+    }
+    
+    /* Keep login purple */
+    .top-links > .outline-btn {
+        color: #7040E8 !important;
+    }
+    
+    /* Hover */
+    .top-links > button:hover {
+        color: #6335D8 !important;
+    }
+    
+    /* Shipment button hover stays white */
+    .top-links > .solid-btn:hover {
+        color: #ffffff !important;
+    }
+    
+    /* Orange arrow */
+    .top-links > .solid-btn span {
+        color: #ff7418 !important;
+    }
     .outline-btn,.solid-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:42px; padding:0 16px; border-radius:12px; font-weight:700; font-size:13px; transition:.2s ease; }
     .outline-btn { color:var(--purple); background:#fff; border:1px solid #ded8ed; }
     .outline-btn:hover { border-color:var(--electric); box-shadow:0 7px 16px rgba(75,46,147,.11); }
